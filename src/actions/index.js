@@ -10,7 +10,7 @@ export const dataLoadFailure = createAction('DATA_LOAD_FAILURE');
 export const dataLoad = () => async (dispatch) => {
     dispatch(dataLoadRequest());
     try {
-        const res = await axios.options(apiUrl)
+        const res = await axios.get(apiUrl)
             .then(res => console.log(res))
             .catch(err => console.log(err.message));
         console.log(res);

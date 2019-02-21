@@ -5,26 +5,47 @@ import * as actions from '../actions';
 
 const initState = {};
 
-const data = handleActions({
-    [actions.dataLoadSuccess](state, payload) {
+const departure = handleActions({
+    [actions.departureLoadSuccess](state, { payload }) {
         console.log(payload);
         return payload;
     },
 }, initState);
 
-const isLoadedData = handleActions({
-    [actions.dataLoadRequest]() {
+const isDepartureLoaded = handleActions({
+    [actions.departureLoadRequest]() {
         return 'request';
     },
-    [actions.dataLoadSuccess]() {
+    [actions.departureLoadSuccess]() {
         return 'success';
     },
-    [actions.dataLoadFailure]() {
+    [actions.departureLoadFailure]() {
+        return 'failure';
+    },
+}, 'none');
+
+const arrival = handleActions({
+    [actions.arrivalLoadSuccess](state, { payload }) {
+        console.log(payload);
+        return payload;
+    },
+}, initState);
+
+const isArrivalLoaded = handleActions({
+    [actions.arrivalLoadRequest]() {
+        return 'request';
+    },
+    [actions.arrivalLoadSuccess]() {
+        return 'success';
+    },
+    [actions.arrivalLoadFailure]() {
         return 'failure';
     },
 }, 'none');
 
 export default combineReducers({
-    data,
-    isLoadedData,
+    departure,
+    isDepartureLoaded,
+    arrival,
+    isArrivalLoaded,
 });

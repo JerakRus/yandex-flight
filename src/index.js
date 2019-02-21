@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from 'redux-thunk';
-import { dataLoad } from "./actions";
+import { departureLoad, arrivalLoad } from "./actions";
 
 import './index.css';
 
@@ -19,7 +19,8 @@ const store = createStore(
         applyMiddleware(thunk),
     ),
 );
-store.dispatch(dataLoad());
+store.dispatch(departureLoad());
+store.dispatch(arrivalLoad());
 
 ReactDOM.render(
     <Provider store={store}>

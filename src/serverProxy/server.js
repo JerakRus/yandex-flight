@@ -32,6 +32,7 @@ yandexApi.get('/departure', (req, res) => {
 });
 yandexApi.get('/arrival', (req, res) => {
     apiUrl.searchParams.append('event', 'arrival');
+    console.log(apiUrl);
     res.set('Access-Control-Allow-Origin', '*');
     request(apiUrl.toString(), (err, yandexRes, data) => {
         if (err) {
@@ -45,5 +46,5 @@ yandexApi.get('/arrival', (req, res) => {
 
 server.use(yandexApi);
 server.listen(port, () => {
-    console.log('server started');
+    console.log('server started on port 4000');
 });

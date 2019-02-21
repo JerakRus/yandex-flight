@@ -1,0 +1,16 @@
+{
+  "name": "serverproxy",
+  "version": "1.0.0",
+  "description": "proxy for yandex-schedule",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "JerakRus",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}

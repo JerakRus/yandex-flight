@@ -22,7 +22,10 @@ apiURL.search = searchParams;
 var yandexApi = express.Router();
 yandexApi.get('/departure', (req, res) => {
     apiURL.searchParams.append('event', 'departure');
-    res.set('Access-Control-Allow-Origin', '*');
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Max-Age': 86400,
+    });
     request(apiURL.toString(), (err, yandexRes, data) => {
         if (err) {
             res.sendStatus(500);

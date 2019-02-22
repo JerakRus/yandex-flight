@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
+import { BrowserRouter } from 'react-router-dom';
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from 'redux-thunk';
 import { departureLoad, arrivalLoad } from "./actions";
 
-import './index.css';
+import 'semantic-ui-css/semantic.min.css';
 
-
-import App from './components/App';
+import AppContainer from './containers/app';
 import rootReducer from './reducers';
 
 
@@ -24,7 +24,9 @@ store.dispatch(arrivalLoad());
 
 ReactDOM.render(
     <Provider store={store}>
-       <App />
+        <BrowserRouter>
+           <AppContainer />
+        </BrowserRouter>
     </Provider>
     , document.getElementById('root'));
 

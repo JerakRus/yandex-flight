@@ -7,8 +7,7 @@ const initState = {};
 
 const departure = handleActions({
     [actions.departureLoadSuccess](state, { payload }) {
-        console.log(payload);
-        return payload;
+        return { ...state, ...payload };
     },
 }, initState);
 
@@ -26,8 +25,7 @@ const isDepartureLoaded = handleActions({
 
 const arrival = handleActions({
     [actions.arrivalLoadSuccess](state, { payload }) {
-        console.log(payload);
-        return payload;
+        return { ...state, ...payload };
     },
 }, initState);
 
@@ -43,9 +41,16 @@ const isArrivalLoaded = handleActions({
     },
 }, 'none');
 
+const searchQuery = handleActions({
+    [actions.setSearchQuery](state, { payload }) {
+        return payload;
+    }
+}, '');
+
 export default combineReducers({
     departure,
     isDepartureLoaded,
     arrival,
     isArrivalLoaded,
+    searchQuery,
 });

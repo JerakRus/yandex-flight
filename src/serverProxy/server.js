@@ -6,7 +6,7 @@ var port = 4000;
 var server = express();
 
 
-var apiUrl = new url.URL('https://api.rasp.yandex.net/v3.0/schedule/');
+var apiURL = new url.URL('https://api.rasp.yandex.net/v3.0/schedule/');
 var searchParams = new url.URLSearchParams({
     apikey: 'c726daa2-f064-4e41-ade9-832f56a4af98',
     station: 'SVO',
@@ -15,28 +15,28 @@ var searchParams = new url.URLSearchParams({
     limit: 1000,
     date: new Date().toISOString(),
 });
-apiUrl.search = searchParams;
+apiURL.search = searchParams;
 
 
+// create REST API my proxy server
 var yandexApi = express.Router();
 yandexApi.get('/departure', (req, res) => {
-    apiUrl.searchParams.append('event', 'departure');
+    apiURL.searchParams.append('event', 'departure');
     res.set('Access-Control-Allow-Origin', '*');
-    request(apiUrl.toString(), (err, yandexRes, data) => {
+    request(apiURL.toString(), (err, yandexRes, data) => {
         if (err) {
-            res.send(err);
+            res.sendStatus(500);
         }
         console.log('get departure');
         res.send(data);
    });
 });
 yandexApi.get('/arrival', (req, res) => {
-    apiUrl.searchParams.append('event', 'arrival');
-    console.log(apiUrl);
+    apiURL.searchParams.append('event', 'arrival');
     res.set('Access-Control-Allow-Origin', '*');
-    request(apiUrl.toString(), (err, yandexRes, data) => {
+    request(apiURL.toString(), (err, yandexRes, data) => {
         if (err) {
-            res.send(err);
+            res.sendStatus(500);
         }
         console.log('get arrival');
         res.send(data);

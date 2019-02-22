@@ -12,6 +12,8 @@ export const arrivalLoadRequest = createAction('ARRIVAL_LOAD_REQUEST');
 export const arrivalLoadSuccess = createAction('ARRIVAL_LOAD_SUCCESS');
 export const arrivalLoadFailure = createAction('ARRIVAL_LOAD_FAILURE');
 
+
+
 export const departureLoad = () => async (dispatch) => {
     dispatch(departureLoadRequest());
     try {

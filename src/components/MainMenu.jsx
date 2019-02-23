@@ -12,14 +12,18 @@ export default class MainMenu extends React.Component {
         const activeItem  = this.props.location.pathname;
         return (
             <Menu pointing stackable color='blue'>
-                <Menu.Item header>
-                    Расписание полетов на Сегодня:
-                </Menu.Item>
                 <Link to="/departure">
                     <Menu.Item as='div' name='/departure'
                                active={activeItem === '/departure'}
                     >
                         Вылет
+                    </Menu.Item>
+                </Link>
+                <Link to="/departureDelay">
+                    <Menu.Item as='div' name='/departureDelay'
+                               active={activeItem === '/departureDelay'}
+                    >
+                        Задержка вылета
                     </Menu.Item>
                 </Link>
                 <Link to="/arrival">
@@ -28,6 +32,13 @@ export default class MainMenu extends React.Component {
                 >
                     Прибытие
                 </Menu.Item>
+                </Link>
+                <Link to="/arrivalDelay">
+                    <Menu.Item as='div' name='/arrivalDelay'
+                               active={activeItem === '/arrivalDelay'}
+                    >
+                        Задержка прибытия
+                    </Menu.Item>
                 </Link>
                 <Menu.Menu width={4} position='right'>
 

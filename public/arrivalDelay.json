@@ -1,0 +1,72 @@
+[
+  {
+    "except_days":null,
+    "arrival":"2019-02-22T03:20:00+03:00",
+    "thread": {
+      "uid":"N4-3532_1_c2543_547",
+      "title":"Санто-Доминго — Москва",
+      "number":"N4 3532",
+      "short_title":"Санто-Доминго — Москва",
+      "carrier": {
+        "code":2543,
+        "codes": {
+          "icao":"NWS",
+          "sirena":"КЛ",
+          "iata":"N4"
+        },
+        "title":"Северный ветер (Nordwind)"
+      },
+      "transport_type":"plane",
+      "vehicle":"Boeing 777-300",
+      "transport_subtype": {
+        "color":null,
+        "code":null,
+        "title":null
+      },
+      "express_type":null
+    },
+    "is_fuzzy":false,
+    "days":"только 22 февраля, 5 марта",
+    "stops":"",
+    "departure":null,
+    "terminal":null,
+    "platform":""
+  },
+  {
+    "except_days":null,
+    "arrival":"2019-02-22T03:25:00+03:00",
+    "thread":{
+      "uid":"SU-2305_5_c26_547",
+      "title":"Франкфурт-на-Майне — Москва",
+      "number":"SU 2305",
+      "short_title":"Франкфурт-на-Майне — Москва",
+      "carrier": {
+        "code":26,
+        "codes": {
+          "icao":"AFL",
+          "sirena":"СУ",
+          "iata":"SU"
+        },
+        "title":"Аэрофлот"
+      },
+      "transport_type":"plane",
+      "vehicle":"Airbus А320",
+      "transport_subtype": {
+        "color":null,
+        "code":null,
+        "title":null
+      },
+      "express_type":null
+    },
+    "is_fuzzy":false,
+    "days":"ежедневно, кроме сб по 31.03",
+    "stops":"",
+    "departure":null,
+    "terminal":null,
+    "platform":""
+  },
+  {
+    "except_days":null,
+    "arrival":"2019-02-22T03:40:00+03:00",
+    "thread":{"uid":"SU-2339_2_c26_547","title":"Штутгарт — Москва","number":"SU 2339","short_title":"Штутгарт — Москва","carrier":{"code":26,"codes":{"icao":"AFL","sirena":"СУ","iata":"SU"},"title":"Аэрофлот"},"transport_type":"plane","vehicle":"Airbus A320","transport_subtype":{"color":null,"code":null,"title":null},"express_type":null},"is_fuzzy":false,"days":"только 17, 22 февраля, 4, 11, 18, 25 марта","stops":"","departure":null,"terminal":null,"platform":""},{"except_days":null,"arrival":"2019-02-22T03:45:00+03:00","thread":{"uid":"SU-2595_1_c26_547","title":"Мюнхен — Москва","number":"SU 2595","short_title":"Мюнхен — Москва","carrier":{"code":26,"codes":{"icao":"AFL","sirena":"СУ","iata":"SU"},"title":"Аэрофлот"},"transport_type":"plane","vehicle":"Airbus А320","transport_subtype":{"color":null,"code":null,"title":null},"express_type":null},"is_fuzzy":false,"days":"ежедневно по 01.03, кроме 24.02","stops":"","departure":null,"terminal":null, "platform":""}
+]

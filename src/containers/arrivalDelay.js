@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
-import Table from '../components/TableSchedule';
+import TableDelay from '../components/TableDelay';
 
 /*flights === schedule === array
  */
@@ -13,13 +13,12 @@ const search = (flights, searchQuery) => {
 
 const mapStateToProps = state => {
     const props ={
-        schedule: search(state.departure.schedule, state.searchQuery),
-        event: state.departure.event,
+        schedule: search(state.arrivalDelay.schedule, state.searchQuery),
+        event: state.arrivalDelay.event,
     };
     return props;
 };
 
 export default withRouter(connect(
     mapStateToProps,
-)(Table));
-
+)(TableDelay));

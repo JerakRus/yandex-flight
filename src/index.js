@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from 'react-router-dom';
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from 'redux-thunk';
-import { departureLoad, arrivalLoad } from "./actions";
+import * as actions from "./actions";
 
 import 'semantic-ui-css/semantic.min.css';
 
@@ -19,8 +19,10 @@ const store = createStore(
         applyMiddleware(thunk),
     ),
 );
-store.dispatch(departureLoad());
-store.dispatch(arrivalLoad());
+store.dispatch(actions.departureLoad());
+store.dispatch(actions.arrivalLoad());
+store.dispatch(actions.departureDelayLoad());
+store.dispatch(actions.arrivalDelayLoad());
 
 ReactDOM.render(
     <Provider store={store}>

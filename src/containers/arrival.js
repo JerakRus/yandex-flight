@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
-import Table from '../components/Table';
+import Table from '../components/TableSchedule';
 
 /*flights === schedule === array
  */

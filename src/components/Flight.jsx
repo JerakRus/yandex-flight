@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 const Flight = (props) => {
     const { flight } = props;
     const { event } = props.match.params;
-    const time = event === 'arrival' ? new Date(flight.arrival).toLocaleTimeString()
+    const time = (event === 'arrival') || (event === 'arrivalDelay') ?
+        new Date(flight.arrival).toLocaleTimeString()
         : new Date(flight.departure).toLocaleTimeString();
     return (
         <Grid container>

@@ -6,7 +6,9 @@ import App from '../components/App';
 const mapStateToProps = state => {
     const props ={
         isDepartureLoaded: state.isDepartureLoaded,
+        isDepartureDelayLoaded: state.isDepartureDelayLoaded,
         isArrivalLoaded: state.isArrivalLoaded,
+        isArrivalDelayLoaded: state.isArrivalDelayLoaded,
     };
     return props;
 };

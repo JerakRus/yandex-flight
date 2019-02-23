@@ -5,7 +5,7 @@ var url = require('url');
 var port = 4000;
 var server = express();
 
-
+// base parameters API request
 var apiURL = new url.URL('https://api.rasp.yandex.net/v3.0/schedule/');
 var searchParams = new url.URLSearchParams({
     apikey: 'c726daa2-f064-4e41-ade9-832f56a4af98',
@@ -18,13 +18,14 @@ var searchParams = new url.URLSearchParams({
 apiURL.search = searchParams;
 
 
-// create REST API my proxy server
+/* create REST API my proxy server
+ * request to Yandex Api, get schedule and send it to client
+ */
 var yandexApi = express.Router();
 yandexApi.get('/departure', (req, res) => {
     apiURL.searchParams.append('event', 'departure');
     res.set({
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Max-Age': 86400,
     });
     request(apiURL.toString(), (err, yandexRes, data) => {
         if (err) {

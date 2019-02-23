@@ -2,10 +2,10 @@ import React from 'react'
 import { Loader, Image, Segment } from 'semantic-ui-react'
 
 const LoaderExampleSizesInverted = () => (
-    <Segment color='blue'>
+    <Segment basic  color='blue'>
         <Loader active >Загружаем рейсы...</Loader>
 
-        <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+        <Image src='/images/white-rectle.png' />
     </Segment>
 );
 

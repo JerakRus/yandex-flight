@@ -1,6 +1,6 @@
 import { createAction } from 'redux-actions';
 import axios from 'axios';
-const myProxyForYandexApi = 'http://195.133.146.22:4000';
+const myProxyForYandexApi = 'http://localhost:4000'; //http://195.133.146.22:4000';
 const urlDelayDeparture = '/departureDelay.json';
 const urlDelayArrival = '/arrivalDelay.json';
 

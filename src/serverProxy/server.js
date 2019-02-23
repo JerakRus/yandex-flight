@@ -13,7 +13,6 @@ var searchParams = new url.URLSearchParams({
     transport_types: 'plane',
     system: 'iata',
     limit: 1000,
-    date: new Date().toISOString(),
 });
 apiURL.search = searchParams;
 
@@ -24,6 +23,7 @@ apiURL.search = searchParams;
 var yandexApi = express.Router();
 yandexApi.get('/departure', (req, res) => {
     apiURL.searchParams.append('event', 'departure');
+    apiURL.searchParams.append('date', new Date().toISOString());
     res.set({
         'Access-Control-Allow-Origin': '*',
     });
@@ -37,6 +37,7 @@ yandexApi.get('/departure', (req, res) => {
 });
 yandexApi.get('/arrival', (req, res) => {
     apiURL.searchParams.append('event', 'arrival');
+    apiURL.searchParams.append('date', new Date().toISOString());
     res.set('Access-Control-Allow-Origin', '*');
     request(apiURL.toString(), (err, yandexRes, data) => {
         if (err) {

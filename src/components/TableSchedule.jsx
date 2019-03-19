@@ -11,7 +11,7 @@ const TableSchedule = (props) => {
                  <Table.Row>
                      <Table.HeaderCell singleLine textAlign='center'>{event === 'arrival' ?
                          'Время прилета:' : 'Время вылета:'}</Table.HeaderCell>
-                     <Table.HeaderCell > Маршут: </Table.HeaderCell>
+                     <Table.HeaderCell textAlign='center'> Маршут: </Table.HeaderCell>
                      <Table.HeaderCell textAlign='center'> Номер рейса:</Table.HeaderCell>
                      <Table.HeaderCell textAlign='center'> Терминал: </Table.HeaderCell>
                      <Table.HeaderCell textAlign='center'> Подбробно: </Table.HeaderCell>
@@ -29,7 +29,7 @@ const TableSchedule = (props) => {
                                  </Header>
                              </Table.Cell>
                              <Table.Cell width={8}>
-                                 <Header>
+                                 <Header textAlign='center'>
                                      {flight.thread.title}
                                  </Header>
                              </Table.Cell>

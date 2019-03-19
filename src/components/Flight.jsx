@@ -9,7 +9,7 @@ const Flight = (props) => {
         new Date(flight.arrival).toLocaleTimeString()
         : new Date(flight.departure).toLocaleTimeString();
     return (
-        <Grid container>
+        <Grid container stackable>
             <Grid.Column width={4}>
                 <Card>
                     <Image src='/images/Plane.jpeg' />

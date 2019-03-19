@@ -12,7 +12,7 @@ const TableDelay = (props) => {
                     <Table.HeaderCell singleLine textAlign='center'>{event === 'arrivalDelay' ?
                         'Должен был прилететь:' : 'Должен был вылететь:'}</Table.HeaderCell>
                     <Table.HeaderCell singleLine textAlign='center'>Задерживается на:</Table.HeaderCell>
-                    <Table.HeaderCell> Маршут: </Table.HeaderCell>
+                    <Table.HeaderCell textAlign='center'> Маршут: </Table.HeaderCell>
                     <Table.HeaderCell textAlign='center'> Номер рейса: </Table.HeaderCell>
                     <Table.HeaderCell textAlign='center'> Терминал: </Table.HeaderCell>
                     <Table.HeaderCell textAlign='center'> Подбробно: </Table.HeaderCell>
@@ -26,7 +26,7 @@ const TableDelay = (props) => {
                         <Table.Row key={_.uniqueId()}>
                             <Table.Cell width={2}>
                                 <Header textAlign='center'>
-                                    {time.toLocaleString()}
+                                    {time.toLocaleTimeString()}
                                 </Header>
                             </Table.Cell>
                             <Table.Cell width={2}>
@@ -35,7 +35,7 @@ const TableDelay = (props) => {
                                 </Header>
                             </Table.Cell>
                             <Table.Cell width={7}>
-                                <Header>
+                                <Header textAlign='center'>
                                     {flight.thread.title}
                                 </Header>
                             </Table.Cell>
